@@ -1,4 +1,4 @@
-import logoEdicor from "./assets/logo_edicor.jpeg";
+import logoEdicor from "./assets/logo-edicor.jpeg";
 
 import principal from "./assets/principal.jpg";
 import antes from "./assets/antes-despues.jpg.png";
