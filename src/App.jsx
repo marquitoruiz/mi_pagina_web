@@ -1,3 +1,5 @@
+import logoEdicor from "./assets/logo_edicor.jpeg";
+
 import principal from "./assets/principal.jpg";
 import antes from "./assets/antes-despues.jpg.png";
 import detalle from "./assets/detalle-juntas.jpg.jpeg";
@@ -64,14 +66,21 @@ export default function AcabadosProPage() {
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div>
-            <p className="text-lg font-bold tracking-tight">
-              EDICOR Acabados en Cerámica & Porcelanato
-            </p>
-            <p className="text-sm text-neutral-600">
-              Instalación profesional para hogares y negocios
-            </p>
-          </div>
+          <div className="flex items-center gap-4">
+  <img
+    src={logoEdicor}
+    alt="Logo de EDICOR Acabados"
+    className="h-25 w-25rounded-xl object-cover shadow-sm"
+  />
+  <div>
+    <p className="text-lg font-bold tracking-tight">
+      EDICOR Acabados en Cerámica & Porcelanato
+    </p>
+    <p className="text-sm text-neutral-600">
+      Instalación profesional para hogares y negocios
+    </p>
+  </div>
+</div>
           <a
             href="https://wa.me/51998535347"
             className="rounded-2xl bg-neutral-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.02]"
