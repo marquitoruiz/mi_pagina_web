@@ -1,8 +1,8 @@
 import logoEdicor from "./assets/logo-edicor.jpeg";
-
 import principal from "./assets/principal.jpg";
 import antes from "./assets/antes-despues.jpg.png";
 import detalle from "./assets/detalle-juntas.jpg.jpeg";
+
 export default function AcabadosProPage() {
   const trabajos = [
     {
@@ -39,7 +39,7 @@ export default function AcabadosProPage() {
     },
     {
       paso: "3. Ejecución",
-      texto: "Realizo el trabajo con precisión, limpieza y cuidado en cada detalle.",
+      texto: "Realizo el trabajo con precisión, buena presentación y cuidado en cada detalle.",
     },
     {
       paso: "4. Entrega",
@@ -67,20 +67,21 @@ export default function AcabadosProPage() {
       <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-4">
-  <img
-    src={logoEdicor}
-    alt="Logo de EDICOR Acabados"
-    className="h-16 w-16 rounded-xl object-cover shadow-sm"
-  />
-  <div>
-    <p className="text-lg font-bold tracking-tight">
-      EDICOR Acabados en Cerámica & Porcelanato
-    </p>
-    <p className="text-sm text-neutral-600">
-      Instalación profesional para hogares y negocios
-    </p>
-  </div>
-</div>
+            <img
+              src={logoEdicor}
+              alt="Logo de EDICOR Acabados"
+              className="h-16 w-16 rounded-xl object-cover shadow-sm"
+            />
+            <div>
+              <p className="text-lg font-bold tracking-tight">
+                EDICOR Acabados en Cerámica & Porcelanato
+              </p>
+              <p className="text-sm text-neutral-600">
+                Instalación profesional para hogares y negocios
+              </p>
+            </div>
+          </div>
+
           <a
             href="https://wa.me/51998535347"
             className="rounded-2xl bg-neutral-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.02]"
@@ -98,14 +99,17 @@ export default function AcabadosProPage() {
               <span className="mb-4 inline-flex w-fit rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700">
                 Remodelaciones y acabados de alta calidad
               </span>
+
               <h1 className="max-w-2xl text-4xl font-black leading-tight tracking-tight md:text-6xl">
                 Dale a tu espacio un acabado limpio, moderno y profesional
               </h1>
+
               <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-700">
                 Especialista en instalación de cerámica, porcelanato, chapados y
                 remodelaciones. Trabajo con precisión, buena presentación y
                 compromiso en cada proyecto.
               </p>
+
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#servicios"
@@ -113,6 +117,7 @@ export default function AcabadosProPage() {
                 >
                   Ver servicios
                 </a>
+
                 <a
                   href="#trabajos"
                   className="rounded-2xl border border-neutral-300 bg-white px-6 py-3 text-sm font-semibold text-neutral-900"
@@ -120,15 +125,18 @@ export default function AcabadosProPage() {
                   Ver trabajos
                 </a>
               </div>
+
               <div className="mt-10 grid grid-cols-3 gap-4 text-sm text-neutral-700">
                 <div className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
                   <p className="text-2xl font-bold">+Calidad</p>
                   <p className="mt-1">Acabados finos y detallados</p>
                 </div>
+
                 <div className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
                   <p className="text-2xl font-bold">+Orden</p>
                   <p className="mt-1">Trabajo limpio y responsable</p>
                 </div>
+
                 <div className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
                   <p className="text-2xl font-bold">+Confianza</p>
                   <p className="mt-1">Atención directa y seria</p>
@@ -152,23 +160,24 @@ export default function AcabadosProPage() {
               </div>
 
               <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
-  <img 
-    src={antes}
-    alt="Antes y después del trabajo"
-    className="aspect-square w-full object-cover rounded-2xl"
-  />
-  <p className="mt-3 text-sm text-neutral-600">Antes / después</p>
-</div>
+                <img
+                  src={antes}
+                  alt="Antes y después del trabajo"
+                  className="aspect-square w-full rounded-2xl object-cover"
+                />
+                <p className="mt-3 text-sm text-neutral-600">Antes / después</p>
+              </div>
 
               <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
-  <img 
-    src={detalle}
-    alt="detalle de las juntas"
-    className="aspect-square w-full object-cover rounded-2xl"
-  />
-  <p className="mt-3 text-sm text-neutral-600">Detalle de cortes y alineación de juntas</p>
-</div>
-
+                <img
+                  src={detalle}
+                  alt="Detalle de las juntas"
+                  className="aspect-square w-full rounded-2xl object-cover"
+                />
+                <p className="mt-3 text-sm text-neutral-600">
+                  Detalle de cortes y alineación de juntas
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -215,6 +224,7 @@ export default function AcabadosProPage() {
                   tus instalaciones y remodelaciones.
                 </p>
               </div>
+
               <a
                 href="https://wa.me/51998535347"
                 className="text-sm font-semibold text-neutral-900 underline underline-offset-4"
@@ -255,15 +265,9 @@ export default function AcabadosProPage() {
               </h2>
               <ul className="mt-6 space-y-4 text-neutral-700">
                 <li>Atención directa contigo, sin intermediarios.</li>
-                <li>
-                  Acabados bien alineados, limpios y de buena presentación.
-                </li>
-                <li>
-                  Responsabilidad en tiempos y cuidado del ambiente de trabajo.
-                </li>
-                <li>
-                  Experiencia en pisos, muros, baños, cocinas y remodelaciones.
-                </li>
+                <li>Acabados bien alineados, limpios y de buena presentación.</li>
+                <li>Responsabilidad en tiempos y cuidado del ambiente de trabajo.</li>
+                <li>Experiencia en pisos, muros, baños, cocinas y remodelaciones.</li>
               </ul>
             </div>
 
@@ -329,6 +333,7 @@ export default function AcabadosProPage() {
                 trabajos de porcelanato o cerámica. Atención directa y respuesta
                 rápida.
               </p>
+
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="https://wa.me/51998535347"
