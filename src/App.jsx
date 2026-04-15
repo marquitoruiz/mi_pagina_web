@@ -1,3 +1,15 @@
+import {
+  BadgeCheck,
+  Phone,
+  MessageCircle,
+  Hammer,
+  Ruler,
+  LayoutGrid,
+  House,
+  Wrench,
+  Sparkles,
+} from "lucide-react";
+
 import logoEdicor from "./assets/logo-edicor.jpeg";
 import principal from "./assets/principal.jpg";
 import antes from "./assets/antes-despues.jpg.png";
@@ -23,12 +35,30 @@ export default function AcabadosProPage() {
   ];
 
   const servicios = [
-    "Instalación de pisos de cerámica y porcelanato",
-    "Chapado de paredes en baños, cocinas y fachadas",
-    "Nivelación y preparación de superficies",
-    "Remodelación de ambientes residenciales y comerciales",
-    "Cambio de revestimientos antiguos",
-    "Asesoría para elección de formato, diseño y distribución",
+    {
+      icono: <LayoutGrid className="h-5 w-5" />,
+      texto: "Instalación de pisos de cerámica y porcelanato",
+    },
+    {
+      icono: <House className="h-5 w-5" />,
+      texto: "Chapado de paredes en baños, cocinas y fachadas",
+    },
+    {
+      icono: <Ruler className="h-5 w-5" />,
+      texto: "Nivelación y preparación de superficies",
+    },
+    {
+      icono: <Wrench className="h-5 w-5" />,
+      texto: "Remodelación de ambientes residenciales y comerciales",
+    },
+    {
+      icono: <Hammer className="h-5 w-5" />,
+      texto: "Cambio de revestimientos antiguos",
+    },
+    {
+      icono: <Sparkles className="h-5 w-5" />,
+      texto: "Asesoría para elección de formato, diseño y distribución",
+    },
   ];
 
   const proceso = [
@@ -196,6 +226,41 @@ export default function AcabadosProPage() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-7xl px-6 pb-8">
+          <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+                  Sobre EDICOR
+                </p>
+                <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
+                  Trabajo responsable, buena presentación y acabados de calidad
+                </h2>
+              </div>
+
+              <div className="space-y-4 text-stone-700 leading-7">
+                <p>
+                  EDICOR está enfocado en trabajos de cerámica, porcelanato,
+                  enchapes y remodelaciones, con atención al detalle y un
+                  resultado final limpio y profesional.
+                </p>
+                <p>
+                  La idea de esta página es que el cliente pueda ver de manera
+                  rápida tus trabajos, entender qué servicios ofreces y
+                  contactarte directamente por WhatsApp.
+                </p>
+                <div className="flex items-start gap-3 rounded-2xl bg-amber-50 p-4 text-amber-900">
+                  <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0" />
+                  <p className="text-sm font-medium">
+                    En este rubro, una buena presentación visual transmite
+                    confianza antes de la primera llamada.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-7xl px-6 py-20" id="servicios">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
@@ -213,12 +278,14 @@ export default function AcabadosProPage() {
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {servicios.map((servicio) => (
               <div
-                key={servicio}
+                key={servicio.texto}
                 className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mb-4 h-10 w-10 rounded-2xl bg-amber-700 shadow-sm" />
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-700 text-white shadow-sm">
+                  {servicio.icono}
+                </div>
                 <p className="text-base font-semibold leading-7 text-stone-800">
-                  {servicio}
+                  {servicio.texto}
                 </p>
               </div>
             ))}
@@ -353,14 +420,16 @@ export default function AcabadosProPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="https://wa.me/51998535347"
-                  className="rounded-2xl bg-amber-700 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-amber-800"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-amber-700 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-amber-800"
                 >
+                  <MessageCircle className="h-4 w-4" />
                   Escribir por WhatsApp
                 </a>
                 <a
                   href="tel:+51998535347"
-                  className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
+                  <Phone className="h-4 w-4" />
                   Llamar ahora
                 </a>
               </div>
