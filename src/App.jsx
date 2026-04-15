@@ -70,7 +70,7 @@ export default function AcabadosProPage() {
   <img
     src={logoEdicor}
     alt="Logo de EDICOR Acabados"
-    className="h-25 w-25rounded-xl object-cover shadow-sm"
+    className="h-16 w-16 rounded-xl object-cover shadow-sm"
   />
   <div>
     <p className="text-lg font-bold tracking-tight">
