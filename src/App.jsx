@@ -14,6 +14,12 @@ import logoEdicor from "./assets/logo-edicor.jpeg";
 import principal from "./assets/principal.jpg";
 import antes from "./assets/antes-despues.jpg.png";
 import detalle from "./assets/detalle-juntas.jpg.jpeg";
+import trabajo1 from "./assets/galeria/trabajo1.jpg";
+import trabajo2 from "./assets/galeria/trabajo2.jpg";
+import trabajo3 from "./assets/galeria/trabajo3.jpg";
+import trabajo4 from "./assets/galeria/trabajo4.jpg";
+import trabajo5 from "./assets/galeria/trabajo5.jpg";
+import trabajo6 from "./assets/galeria/trabajo6.jpg";
 
 export default function AcabadosProPage() {
   const trabajos = [
@@ -31,6 +37,39 @@ export default function AcabadosProPage() {
       titulo: "Remodelación de pisos",
       detalle:
         "Retiro, preparación de superficie e instalación de cerámico o porcelanato con acabado profesional.",
+    },
+  ];
+
+  const galeria = [
+    {
+      imagen: trabajo1,
+      titulo: "Instalación de piso",
+      detalle: "Trabajo real con acabado limpio y buena presentación.",
+    },
+    {
+      imagen: trabajo2,
+      titulo: "Remodelación interior",
+      detalle: "Detalle de instalación con alineación cuidada.",
+    },
+    {
+      imagen: trabajo3,
+      titulo: "Acabado en porcelanato",
+      detalle: "Superficie terminada con buena nivelación y estética.",
+    },
+    {
+      imagen: trabajo4,
+      titulo: "Trabajo en ambiente residencial",
+      detalle: "Aplicación precisa y resultado visual profesional.",
+    },
+    {
+      imagen: trabajo5,
+      titulo: "Enchape y detalle",
+      detalle: "Acabados bien ejecutados en área de trabajo real.",
+    },
+    {
+      imagen: trabajo6,
+      titulo: "Presentación final",
+      detalle: "Resultado final limpio, ordenado y bien instalado.",
     },
   ];
 
@@ -180,7 +219,9 @@ export default function AcabadosProPage() {
                 </div>
 
                 <div className="rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm">
-                  <p className="text-2xl font-black text-amber-700">+Confianza</p>
+                  <p className="text-2xl font-black text-amber-700">
+                    +Confianza
+                  </p>
                   <p className="mt-1">Atención directa y seria</p>
                 </div>
               </div>
@@ -194,7 +235,8 @@ export default function AcabadosProPage() {
                   className="aspect-[16/9] w-full rounded-[1.5rem] object-cover"
                 />
                 <p className="mt-4 text-sm font-semibold text-stone-900">
-                  Trabajo de porcelanato instalado con acabado limpio y nivelado profesional
+                  Trabajo de porcelanato instalado con acabado limpio y nivelado
+                  profesional
                 </p>
                 <p className="text-sm text-stone-600">
                   Acabado real instalado con presentación limpia y profesional.
@@ -316,7 +358,30 @@ export default function AcabadosProPage() {
               </a>
             </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {galeria.map((item) => (
+                <article
+                  key={item.titulo}
+                  className="overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <img
+                    src={item.imagen}
+                    alt={item.titulo}
+                    className="h-72 w-full object-cover"
+                  />
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold tracking-tight text-stone-900">
+                      {item.titulo}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-stone-600">
+                      {item.detalle}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
               {trabajos.map((trabajo) => (
                 <article
                   key={trabajo.titulo}
@@ -348,9 +413,15 @@ export default function AcabadosProPage() {
               </h2>
               <ul className="mt-6 space-y-4 text-stone-700">
                 <li>Atención directa contigo, sin intermediarios.</li>
-                <li>Acabados bien alineados, limpios y de buena presentación.</li>
-                <li>Responsabilidad en tiempos y cuidado del ambiente de trabajo.</li>
-                <li>Experiencia en pisos, muros, baños, cocinas y remodelaciones.</li>
+                <li>
+                  Acabados bien alineados, limpios y de buena presentación.
+                </li>
+                <li>
+                  Responsabilidad en tiempos y cuidado del ambiente de trabajo.
+                </li>
+                <li>
+                  Experiencia en pisos, muros, baños, cocinas y remodelaciones.
+                </li>
               </ul>
             </div>
 
