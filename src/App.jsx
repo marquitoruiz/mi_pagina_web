@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   BadgeCheck,
   Phone,
@@ -11,6 +11,9 @@ import {
   Sparkles,
   X,
   ArrowUpRight,
+  Menu,
+  ChevronUp,
+  Star,
 } from "lucide-react";
 
 import logoEdicor from "./assets/logo-edicor.jpeg";
@@ -32,6 +35,21 @@ import revestimiento from "./assets/revestimiento.png";
 
 export default function AcabadosProPage() {
   const [imagenActiva, setImagenActiva] = useState(null);
+  const [menuAbierto, setMenuAbierto] = useState(false);
+  const [mostrarSubir, setMostrarSubir] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setMostrarSubir(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const abrirImagen = (imagen, titulo, detalle) => {
+    setImagenActiva({ imagen, titulo, detalle });
+  };
 
   const trabajos = [
     {
@@ -172,18 +190,17 @@ export default function AcabadosProPage() {
     {
       nombre: "Cliente residencial",
       texto:
-        "Quedó muy bien el porcelanato de la sala. Buen acabado, puntualidad y orden en el trabajo. proximamente veras los videos",
-        
+        "Quedó muy bien el porcelanato de la sala. Buen acabado, puntualidad y orden en el trabajo.",
     },
     {
       nombre: "Remodelación de baño",
       texto:
-        "Se nota la experiencia en los cortes y el alineado. Muy recomendado para acabados finos. proximamente veras los videos",
+        "Se nota la experiencia en los cortes y el alineado. Muy recomendado para acabados finos.",
     },
     {
       nombre: "Proyecto de cocina",
       texto:
-        "Trabajo serio y responsable. El enchape quedó limpio y elegante. proximamente veras los videos",
+        "Trabajo serio y responsable. El enchape quedó limpio y elegante.",
     },
   ];
 
@@ -208,14 +225,78 @@ export default function AcabadosProPage() {
               </div>
             </div>
 
-            <a
-  href="https://wa.me/51998535347"
-  className="inline-flex items-center gap-2 rounded-2xl bg-amber-700 px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.03] hover:bg-amber-800"
->
-  Cotizar por WhatsApp
-  <ArrowUpRight className="h-4 w-4" />
-</a>
+            <nav className="hidden items-center gap-3 md:flex">
+              <a
+                href="#servicios"
+                className="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 transition hover:bg-stone-100"
+              >
+                Servicios
+              </a>
+              <a
+                href="#trabajos"
+                className="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 transition hover:bg-stone-100"
+              >
+                Portafolio
+              </a>
+              <a
+                href="#contacto"
+                className="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 transition hover:bg-stone-100"
+              >
+                Contacto
+              </a>
+              <a
+                href="https://wa.me/51998535347"
+                className="inline-flex items-center gap-2 rounded-2xl bg-amber-700 px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.03] hover:bg-amber-800"
+              >
+                Cotizar por WhatsApp
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </nav>
+
+            <button
+              type="button"
+              onClick={() => setMenuAbierto(!menuAbierto)}
+              className="inline-flex items-center justify-center rounded-2xl border border-stone-200 bg-white p-3 text-stone-800 shadow-sm md:hidden"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
           </div>
+
+          {menuAbierto && (
+            <div className="border-t border-stone-200 bg-white px-6 py-4 md:hidden">
+              <div className="flex flex-col gap-3">
+                <a
+                  href="#servicios"
+                  className="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 hover:bg-stone-100"
+                  onClick={() => setMenuAbierto(false)}
+                >
+                  Servicios
+                </a>
+                <a
+                  href="#trabajos"
+                  className="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 hover:bg-stone-100"
+                  onClick={() => setMenuAbierto(false)}
+                >
+                  Portafolio
+                </a>
+                <a
+                  href="#contacto"
+                  className="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 hover:bg-stone-100"
+                  onClick={() => setMenuAbierto(false)}
+                >
+                  Contacto
+                </a>
+                <a
+                  href="https://wa.me/51998535347"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-700 px-5 py-3 text-sm font-semibold text-white shadow-md"
+                  onClick={() => setMenuAbierto(false)}
+                >
+                  Cotizar por WhatsApp
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          )}
         </header>
 
         <main>
@@ -242,14 +323,14 @@ export default function AcabadosProPage() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href="#servicios"
-                    className="rounded-2xl bg-stone-900 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:scale-[1.02] hover:bg-stone-800"
+                    className="rounded-2xl bg-stone-900 px-6 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.02] hover:bg-stone-800"
                   >
                     Ver servicios
                   </a>
 
                   <a
                     href="#trabajos"
-                    className="rounded-2xl border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-stone-900 shadow-sm transition hover:bg-stone-50"
+                    className="rounded-2xl border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-stone-900 shadow-sm transition duration-300 hover:bg-stone-50"
                   >
                     Ver trabajos
                   </a>
@@ -268,7 +349,7 @@ export default function AcabadosProPage() {
                     <p className="mt-1">Trabajo limpio y responsable</p>
                   </div>
 
-                  <div className="rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm">
+                  <div className="rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <p className="text-2xl font-black text-amber-700">
                       +Confianza
                     </p>
@@ -284,12 +365,11 @@ export default function AcabadosProPage() {
                     alt="Foto principal de trabajo de porcelanato"
                     className="aspect-[16/9] w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
                     onClick={() =>
-                      setImagenActiva({
-                        imagen: principal,
-                        titulo: "Trabajo principal de porcelanato",
-                        detalle:
-                          "Acabado real instalado con presentación limpia y profesional.",
-                      })
+                      abrirImagen(
+                        principal,
+                        "Trabajo principal de porcelanato",
+                        "Acabado real instalado con presentación limpia y profesional."
+                      )
                     }
                   />
                   <p className="mt-4 text-sm font-semibold text-stone-900">
@@ -305,14 +385,13 @@ export default function AcabadosProPage() {
                   <img
                     src={antes}
                     alt="Antes y después del trabajo"
-                    className="aspect-[16/9] w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
+                    className="aspect-square w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
                     onClick={() =>
-                      setImagenActiva({
-                        imagen: antes,
-                        titulo: "Antes / después",
-                        detalle:
-                          "Comparación visual del trabajo antes y después de la intervención.",
-                      })
+                      abrirImagen(
+                        antes,
+                        "Antes / después",
+                        "Comparación visual del trabajo antes y después de la intervención."
+                      )
                     }
                   />
                   <p className="mt-3 text-sm font-medium text-stone-600">
@@ -324,14 +403,13 @@ export default function AcabadosProPage() {
                   <img
                     src={detalle}
                     alt="Detalle de las juntas"
-                   className="aspect-[16/9] w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
+                    className="aspect-square w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
                     onClick={() =>
-                      setImagenActiva({
-                        imagen: detalle,
-                        titulo: "Detalle de cortes y alineación de juntas",
-                        detalle:
-                          "Trabajo con cuidado en la alineación, cortes y presentación final.",
-                      })
+                      abrirImagen(
+                        detalle,
+                        "Detalle de cortes y alineación de juntas",
+                        "Trabajo con cuidado en la alineación, cortes y presentación final."
+                      )
                     }
                   />
                   <p className="mt-3 text-sm font-medium text-stone-600">
@@ -432,13 +510,13 @@ export default function AcabadosProPage() {
                   key={servicio.titulo}
                   type="button"
                   onClick={() =>
-                    setImagenActiva({
-                      imagen: servicio.imagen,
-                      titulo: servicio.titulo,
-                      detalle: servicio.detalle,
-                    })
+                    abrirImagen(
+                      servicio.imagen,
+                      servicio.titulo,
+                      servicio.detalle
+                    )
                   }
-                  className="group rounded-[2rem] border border-stone-200 bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                  className="group rounded-[2rem] border border-stone-200 bg-white p-6 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-700 text-white shadow-sm transition group-hover:bg-stone-900">
                     {servicio.icono}
@@ -494,9 +572,8 @@ export default function AcabadosProPage() {
                 {galeria.map((item) => (
                   <article
                     key={item.titulo}
-                    onClick={() => setImagenActiva(item)}
-                    className="group cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm 
-                    transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    onClick={() => abrirImagen(item.imagen, item.titulo, item.detalle)}
+                    className="group cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
                     <img
                       src={item.imagen}
@@ -519,13 +596,15 @@ export default function AcabadosProPage() {
                 {trabajos.map((trabajo) => (
                   <article
                     key={trabajo.titulo}
-                    onClick={() => setImagenActiva(trabajo)}
-                    className="cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    onClick={() =>
+                      abrirImagen(trabajo.imagen, trabajo.titulo, trabajo.detalle)
+                    }
+                    className="group cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
                     <img
                       src={trabajo.imagen}
                       alt={trabajo.titulo}
-                      className="aspect-[4/3] w-full object-cover"
+                      className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                     <div className="p-6">
                       <h3 className="text-xl font-bold tracking-tight text-stone-900">
@@ -603,6 +682,13 @@ export default function AcabadosProPage() {
                     key={testimonio.nombre}
                     className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm"
                   >
+                    <div className="mb-4 flex gap-1 text-amber-500">
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                    </div>
                     <p className="text-lg leading-8 text-stone-700">
                       “{testimonio.texto}”
                     </p>
@@ -684,33 +770,35 @@ export default function AcabadosProPage() {
               </div>
             </div>
           </section>
-        </main>
-        <section className="mx-auto max-w-7xl px-6 pb-16">
-  <div className="rounded-[2rem] border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-stone-50 p-8 shadow-sm md:p-10">
-    <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-      <div className="max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-          ¿Listo para empezar?
-        </p>
-        <h3 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
-          Cotiza tu proyecto y recibe atención directa por WhatsApp
-        </h3>
-        <p className="mt-3 text-stone-700">
-          Si estás pensando en renovar o dar acabados a pisos, baños, cocinas o cualquier ambiente,
-          escríbeme y revisamos la mejor solución para tu espacio.
-        </p>
-      </div>
 
-      <a
-        href="https://wa.me/51998535347"
-        className="inline-flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.03] hover:bg-stone-800"
-      >
-        Escribir ahora
-        <ArrowUpRight className="h-4 w-4" />
-      </a>
-    </div>
-  </div>
-</section>
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <div className="rounded-[2rem] border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-stone-50 p-8 shadow-sm md:p-10">
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div className="max-w-2xl">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+                    ¿Listo para empezar?
+                  </p>
+                  <h3 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
+                    Cotiza tu proyecto y recibe atención directa por WhatsApp
+                  </h3>
+                  <p className="mt-3 text-stone-700">
+                    Si estás pensando en renovar pisos, baños, cocinas o
+                    cualquier ambiente, escríbeme y revisamos la mejor solución
+                    para tu espacio.
+                  </p>
+                </div>
+
+                <a
+                  href="https://wa.me/51998535347"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.03] hover:bg-stone-800"
+                >
+                  Escribir ahora
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
 
         <footer className="border-t border-stone-200 bg-white">
           <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-stone-600 md:flex-row md:items-center md:justify-between">
@@ -729,21 +817,32 @@ export default function AcabadosProPage() {
           </div>
         </footer>
       </div>
-<a
-  href="https://wa.me/51998535347"
-  className="fixed bottom-5 right-5 z-[90] inline-flex items-center gap-3 rounded-full bg-green-600 px-5 py-3 
-  text-sm font-semibold text-white shadow-2xl transition duration-300 hover:scale-105 hover:bg-green-700"
->
-  <MessageCircle className="h-5 w-5" />
-  WhatsApp
-</a>
+
+      <a
+        href="https://wa.me/51998535347"
+        className="fixed bottom-5 right-5 z-[90] inline-flex items-center gap-3 rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-2xl transition duration-300 hover:scale-105 hover:bg-green-700"
+      >
+        <MessageCircle className="h-5 w-5" />
+        WhatsApp
+      </a>
+
+      {mostrarSubir && (
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-24 right-5 z-[90] inline-flex h-12 w-12 items-center justify-center rounded-full bg-stone-900 text-white shadow-2xl transition duration-300 hover:scale-105 hover:bg-stone-800"
+        >
+          <ChevronUp className="h-5 w-5" />
+        </button>
+      )}
+
       {imagenActiva && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm"
           onClick={() => setImagenActiva(null)}
         >
           <div
-            className="relative max-h-[90vh] w-full max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-2xl"
+            className="relative max-h-[90vh] w-full max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-2xl transition duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             <button
