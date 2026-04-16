@@ -669,10 +669,40 @@ export default function AcabadosProPage() {
               <div className="max-w-3xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
                   Testimonios
+                  <section className="mx-auto max-w-7xl px-6 py-20">
+  <div className="max-w-3xl">
+    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+      Testimonios en video
+    </p>
+    <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
+      Clientes satisfechos con el resultado
+    </h2>
+    <p className="mt-4 text-lg text-stone-700">
+      Opinión real de cliente luego de finalizar el trabajo.
+    </p>
+  </div>
+
+  <div className="mt-10 grid gap-6 md:grid-cols-2">
+    
+    <div className="rounded-[2rem] border border-stone-200 bg-white p-4 shadow-sm">
+      <div className="aspect-video overflow-hidden rounded-[1.5rem]">
+        <iframe
+          className="h-full w-full"
+          src="https://www.youtube.com/embed/ZYs9No62AaM"
+          title="Testimonio cliente EDICOR"
+          allowFullScreen
+        />
+      </div>
+      <p className="mt-4 text-sm font-semibold text-stone-900">
+        Cliente satisfecho con instalación de porcelanato
+      </p>
+    </div>
+
+  </div>
+</section>
                 </p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
-                  Comentarios que puedes mostrar cuando ya tengas clientes
-                  propios
+                  comentarios de clientes satisfechos 
                 </h2>
               </div>
 
