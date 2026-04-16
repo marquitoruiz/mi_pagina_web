@@ -87,29 +87,30 @@ export default function AcabadosProPage() {
   const servicios = [
     {
       icono: <LayoutGrid className="h-5 w-5" />,
-      texto: "Instalación de pisos de cerámica y porcelanato",
+      texto: "Instalación de pisos de cerámica y porcelanato: Acabados nivelados, alineados y con excelente presentación final.",
     },
     {
       icono: <House className="h-5 w-5" />,
-      texto: "Chapado de paredes en baños, cocinas y fachadas",
+      texto: "Chapado de paredes en baños, cocinas y fachadas:Estética moderna con detalles bien definidos.",
     },
     {
       icono: <Ruler className="h-5 w-5" />,
-      texto: "Nivelación y preparación de superficies",
+      texto: "Nivelación y preparación de superficies:Base firme para un acabado perfecto.",
     },
     {
       icono: <Wrench className="h-5 w-5" />,
-      texto: "Remodelación de ambientes residenciales y comerciales",
+      texto: "Remodelación de ambientes residenciales y comerciales;Transformamos espacios con resultados profesionales.",
     },
     {
       icono: <Hammer className="h-5 w-5" />,
-      texto: "Cambio de revestimientos antiguos",
+      texto: "Cambio de revestimientos antiguos:Renovación total con instalación limpia y ordenada.",
     },
     {
       icono: <Sparkles className="h-5 w-5" />,
-      texto: "Asesoría para elección de formato, diseño y distribución",
+      texto: "Asesoría para elección de formato, diseño y distribución:Te ayudamos a elegir lo mejor para tu espacio.",
     },
   ];
+  
 
   const proceso = [
     {
@@ -326,15 +327,17 @@ export default function AcabadosProPage() {
                     resultado final limpio y profesional.
                   </p>
                   <p>
-                    La idea de esta página es que el cliente pueda ver de manera
-                    rápida tus trabajos, entender qué servicios ofreces y
-                    contactarte directamente por WhatsApp.
+                   “Haz realidad tu proyecto hoy mismo. Escríbenos y cotiza sin compromiso.”
+“Tu espacio merece un acabado perfecto. Contáctanos y empecemos.”
+“Estamos listos para transformar tu idea en un resultado impecable.”
+“Un buen trabajo comienza con un mensaje. ¡Hablemos!”.
                   </p>
                   <div className="flex items-start gap-3 rounded-2xl bg-amber-50 p-4 text-amber-900">
                     <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0" />
                     <p className="text-sm font-medium">
-                      En este rubro, una buena presentación visual transmite
-                      confianza antes de la primera llamada.
+                      “Calidad, detalle y compromiso en cada trabajo. Contáctanos y compruébalo.”
+“Más que un servicio, ofrecemos resultados que se notan. Escríbenos.”
+“Trabajos bien hechos que hablan por sí solos. El siguiente puede ser el tuyo.”
                     </p>
                   </div>
                 </div>
@@ -348,11 +351,11 @@ export default function AcabadosProPage() {
                 Servicios
               </p>
               <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
-                Lo que puedes ofrecer en tu página
+                Especialistas en acabados de alta calidad para tu hogar o negocio
               </h2>
               <p className="mt-4 text-lg text-stone-700">
-                Tu web debe dejar clarísimo qué haces, para quién trabajas y por
-                qué vale la pena contactarte.
+                Transformamos tus espacios con acabados de calidad.
+                Desde la preparación hasta el acabado final, nos enfocamos en calidad, orden y responsabilidad.
               </p>
             </div>
 
@@ -371,6 +374,11 @@ export default function AcabadosProPage() {
                 </div>
               ))}
             </div>
+            <p>
+               <h4 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
+                   Cotiza rápido por WhatsApp y recibe atención personalizada
+                  </h4>
+              </p>
           </section>
 
           <section className="bg-white py-20" id="trabajos">
@@ -381,11 +389,10 @@ export default function AcabadosProPage() {
                     Portafolio
                   </p>
                   <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
-                    Muestra tus mejores trabajos
+                    “Trabajos bien hechos desde el primer detalle”
                   </h2>
                   <p className="mt-4 text-lg text-stone-700">
-                    La parte más importante de tu web serán las imágenes reales
-                    de tus instalaciones y remodelaciones.
+                   El nivel de acabado que tu espacio merece
                   </p>
                 </div>
 
@@ -454,12 +461,12 @@ export default function AcabadosProPage() {
                   Por qué elegirte
                 </p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
-                  Lo que genera confianza y te ayuda a cerrar trabajos
+                 Por qué elegirnos para tu proyecto
                 </h2>
                 <ul className="mt-6 space-y-4 text-stone-700">
                   <li>Atención directa contigo, sin intermediarios.</li>
                   <li>
-                    Acabados bien alineados, limpios y de buena presentación.
+                    Acabados bien hechos, limpios y de buena presentación.
                   </li>
                   <li>
                     Responsabilidad en tiempos y cuidado del ambiente de trabajo.
