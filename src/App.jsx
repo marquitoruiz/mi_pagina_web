@@ -10,6 +10,7 @@ import {
   Wrench,
   Sparkles,
   X,
+  ArrowUpRight,
 } from "lucide-react";
 
 import logoEdicor from "./assets/logo-edicor.jpeg";
@@ -53,134 +54,136 @@ export default function AcabadosProPage() {
     },
   ];
 
- const galeria = [
-  {
-    imagen: trabajo1,
-    titulo: "Porcelanato en sala",
-    detalle: "Instalación limpia con buena alineación y acabado uniforme.",
-  },
-  {
-    imagen: trabajo2,
-    titulo: "Remodelación interior",
-    detalle: "Trabajo real con mejor distribución visual y presentación final.",
-  },
-  {
-    imagen: trabajo3,
-    titulo: "Acabado en piso",
-    detalle: "Superficie terminada con nivelación correcta y estética moderna.",
-  },
-  {
-    imagen: trabajo4,
-    titulo: "Ambiente residencial",
-    detalle: "Aplicación precisa y resultado profesional en espacio habitable.",
-  },
-  {
-    imagen: trabajo5,
-    titulo: "Enchape decorativo",
-    detalle: "Detalle visual cuidado con cortes y presentación prolija.",
-  },
-  {
-    imagen: trabajo6,
-    titulo: "Entrega final",
-    detalle: "Resultado terminado, limpio y listo para uso del cliente.",
-  },
-];
+  const galeria = [
+    {
+      imagen: trabajo1,
+      titulo: "Porcelanato en sala",
+      detalle: "Instalación limpia con buena alineación y acabado uniforme.",
+    },
+    {
+      imagen: trabajo2,
+      titulo: "Remodelación interior",
+      detalle: "Trabajo real con mejor distribución visual y presentación final.",
+    },
+    {
+      imagen: trabajo3,
+      titulo: "Acabado en piso",
+      detalle: "Superficie terminada con nivelación correcta y estética moderna.",
+    },
+    {
+      imagen: trabajo4,
+      titulo: "Ambiente residencial",
+      detalle: "Aplicación precisa y resultado profesional en espacio habitable.",
+    },
+    {
+      imagen: trabajo5,
+      titulo: "Enchape decorativo",
+      detalle: "Detalle visual cuidado con cortes y presentación prolija.",
+    },
+    {
+      imagen: trabajo6,
+      titulo: "Entrega final",
+      detalle: "Resultado terminado, limpio y listo para uso del cliente.",
+    },
+  ];
 
- const servicios = [
-  {
-    icono: <LayoutGrid className="h-5 w-5" />,
-    nombre: "Instalación de pisos",
-    texto: "Cerámica y porcelanato con acabado nivelado y presentación fina.",
-    imagen: sala,
-    titulo: "Instalación de pisos de cerámica y porcelanato",
-    detalle:
-      "Acabados nivelados, alineados y con excelente presentación final.",
-  },
-  {
-    icono: <House className="h-5 w-5" />,
-    nombre: "Chapado de paredes",
-    texto: "Baños, cocinas y fachadas con cortes precisos y estética moderna.",
-    imagen: bano,
-    titulo: "Chapado de paredes en baños y cocinas",
-    detalle:
-      "Estética moderna con cortes precisos y excelente acabado visual.",
-  },
-  {
-    icono: <Ruler className="h-5 w-5" />,
-    nombre: "Nivelación",
-    texto: "Base firme y bien preparada para lograr un acabado perfecto.",
-    imagen: nivelacion,
-    titulo: "Nivelación y preparación de superficies",
-    detalle:
-      "Base firme y nivelada para lograr un acabado profesional duradero.",
-  },
-  {
-    icono: <Wrench className="h-5 w-5" />,
-    nombre: "Remodelación",
-    texto: "Ambientes residenciales y comerciales con resultado profesional.",
-    imagen: trabajo2,
-    titulo: "Remodelación de ambientes",
-    detalle:
-      "Transformación completa de espacios con acabados modernos y limpios.",
-  },
-  {
-    icono: <Hammer className="h-5 w-5" />,
-    nombre: "Cambio de revestimientos",
-    texto: "Renovación total con instalación limpia, ordenada y bien ejecutada.",
-    imagen: revestimiento,
-    titulo: "Cambio de revestimientos",
-    detalle:
-      "Renovación completa con instalación limpia y excelente presentación.",
-  },
-  {
-    icono: <Sparkles className="h-5 w-5" />,
-    nombre: "Asesoría en diseño",
-    texto: "Te ayudamos a elegir formato, distribución y estilo para tu espacio.",
-    imagen: trabajo6,
-    titulo: "Asesoría en diseño y distribución",
-    detalle:
-      "Te ayudamos a elegir lo mejor según tu espacio y estilo.",
-  },
-];
+  const servicios = [
+    {
+      icono: <LayoutGrid className="h-5 w-5" />,
+      nombre: "Instalación de pisos",
+      texto: "Cerámica y porcelanato con acabado nivelado y presentación fina.",
+      imagen: sala,
+      titulo: "Instalación de pisos de cerámica y porcelanato",
+      detalle:
+        "Acabados nivelados, alineados y con excelente presentación final.",
+    },
+    {
+      icono: <House className="h-5 w-5" />,
+      nombre: "Chapado de paredes",
+      texto: "Baños, cocinas y fachadas con cortes precisos y estética moderna.",
+      imagen: bano,
+      titulo: "Chapado de paredes en baños y cocinas",
+      detalle:
+        "Estética moderna con cortes precisos y excelente acabado visual.",
+    },
+    {
+      icono: <Ruler className="h-5 w-5" />,
+      nombre: "Nivelación",
+      texto: "Base firme y bien preparada para lograr un acabado perfecto.",
+      imagen: nivelacion,
+      titulo: "Nivelación y preparación de superficies",
+      detalle:
+        "Base firme y nivelada para lograr un acabado profesional duradero.",
+    },
+    {
+      icono: <Wrench className="h-5 w-5" />,
+      nombre: "Remodelación",
+      texto: "Ambientes residenciales y comerciales con resultado profesional.",
+      imagen: trabajo2,
+      titulo: "Remodelación de ambientes",
+      detalle:
+        "Transformación completa de espacios con acabados modernos y limpios.",
+    },
+    {
+      icono: <Hammer className="h-5 w-5" />,
+      nombre: "Cambio de revestimientos",
+      texto:
+        "Renovación total con instalación limpia, ordenada y bien ejecutada.",
+      imagen: revestimiento,
+      titulo: "Cambio de revestimientos",
+      detalle:
+        "Renovación completa con instalación limpia y excelente presentación.",
+    },
+    {
+      icono: <Sparkles className="h-5 w-5" />,
+      nombre: "Asesoría en diseño",
+      texto:
+        "Te ayudamos a elegir formato, distribución y estilo para tu espacio.",
+      imagen: trabajo6,
+      titulo: "Asesoría en diseño y distribución",
+      detalle: "Te ayudamos a elegir lo mejor según tu espacio y estilo.",
+    },
+  ];
 
-const proceso = [
-  {
-    paso: "1. Evaluación",
-    texto:
-      "Revisamos el área, medidas, tipo de material y estado de la superficie.",
-  },
-  {
-    paso: "2. Propuesta",
-    texto:
-      "Te indico la mejor forma de instalación, tiempos de trabajo y acabados recomendados.",
-  },
-  {
-    paso: "3. Ejecución",
-    texto:
-      "Realizo el trabajo con precisión, buena presentación y cuidado en cada detalle.",
-  },
-  {
-    paso: "4. Entrega",
-    texto:
-      "Te entrego el ambiente listo, bien acabado y con revisión final contigo.",
-  },
-];
+  const proceso = [
+    {
+      paso: "1. Evaluación",
+      texto:
+        "Revisamos el área, medidas, tipo de material y estado de la superficie.",
+    },
+    {
+      paso: "2. Propuesta",
+      texto:
+        "Te indico la mejor forma de instalación, tiempos de trabajo y acabados recomendados.",
+    },
+    {
+      paso: "3. Ejecución",
+      texto:
+        "Realizo el trabajo con precisión, buena presentación y cuidado en cada detalle.",
+    },
+    {
+      paso: "4. Entrega",
+      texto:
+        "Te entrego el ambiente listo, bien acabado y con revisión final contigo.",
+    },
+  ];
 
   const testimonios = [
     {
       nombre: "Cliente residencial",
       texto:
-        "Quedó muy bien el porcelanato de la sala. Buen acabado, puntualidad y orden en el trabajo.",
+        "Quedó muy bien el porcelanato de la sala. Buen acabado, puntualidad y orden en el trabajo. proximamente veras los videos",
+        
     },
     {
       nombre: "Remodelación de baño",
       texto:
-        "Se nota la experiencia en los cortes y el alineado. Muy recomendado para acabados finos.",
+        "Se nota la experiencia en los cortes y el alineado. Muy recomendado para acabados finos. proximamente veras los videos",
     },
     {
       nombre: "Proyecto de cocina",
       texto:
-        "Trabajo serio y responsable. El enchape quedó limpio y elegante.",
+        "Trabajo serio y responsable. El enchape quedó limpio y elegante. proximamente veras los videos",
     },
   ];
 
@@ -197,7 +200,7 @@ const proceso = [
               />
               <div>
                 <p className="text-lg font-extrabold tracking-tight text-stone-900">
-                  EDICOR Acabados en Cerámica & Porcelanato
+                  EDICOR ACABADOS en Cerámica & Porcelanato
                 </p>
                 <p className="text-sm text-stone-600">
                   Instalación profesional para hogares y negocios
@@ -206,11 +209,12 @@ const proceso = [
             </div>
 
             <a
-              href="https://wa.me/51998535347"
-              className="rounded-2xl bg-amber-700 px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:scale-[1.02] hover:bg-amber-800"
-            >
-              Cotizar por WhatsApp
-            </a>
+  href="https://wa.me/51998535347"
+  className="inline-flex items-center gap-2 rounded-2xl bg-amber-700 px-5 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.03] hover:bg-amber-800"
+>
+  Cotizar por WhatsApp
+  <ArrowUpRight className="h-4 w-4" />
+</a>
           </div>
         </header>
 
@@ -230,8 +234,9 @@ const proceso = [
                 </h1>
 
                 <p className="mt-6 max-w-xl text-lg leading-8 text-stone-700">
-                  Especialista en cerámica, porcelanato, enchapes y remodelaciones. Realizo trabajos con buena nivelación, 
-                  cortes precisos, acabado limpio y presentación profesional.
+                  Especialista en cerámica, porcelanato, enchapes y
+                  remodelaciones. Realizo trabajos con buena nivelación, cortes
+                  precisos, acabado limpio y presentación profesional.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -251,14 +256,14 @@ const proceso = [
                 </div>
 
                 <div className="mt-10 grid grid-cols-1 gap-4 text-sm text-stone-700 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm">
+                  <div className="rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <p className="text-2xl font-black text-amber-700">
                       +Calidad
                     </p>
                     <p className="mt-1">Acabados finos y detallados</p>
                   </div>
 
-                  <div className="rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm">
+                  <div className="rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <p className="text-2xl font-black text-amber-700">+Orden</p>
                     <p className="mt-1">Trabajo limpio y responsable</p>
                   </div>
@@ -277,7 +282,7 @@ const proceso = [
                   <img
                     src={principal}
                     alt="Foto principal de trabajo de porcelanato"
-                    className="aspect-[16/9] w-full cursor-pointer rounded-[1.5rem] object-cover"
+                    className="aspect-[16/9] w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
                     onClick={() =>
                       setImagenActiva({
                         imagen: principal,
@@ -300,7 +305,7 @@ const proceso = [
                   <img
                     src={antes}
                     alt="Antes y después del trabajo"
-                    className="aspect-square w-full cursor-pointer rounded-[1.5rem] object-cover"
+                    className="aspect-[16/9] w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
                     onClick={() =>
                       setImagenActiva({
                         imagen: antes,
@@ -319,7 +324,7 @@ const proceso = [
                   <img
                     src={detalle}
                     alt="Detalle de las juntas"
-                    className="aspect-square w-full cursor-pointer rounded-[1.5rem] object-cover"
+                   className="aspect-[16/9] w-full cursor-pointer rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.01]"
                     onClick={() =>
                       setImagenActiva({
                         imagen: detalle,
@@ -336,49 +341,50 @@ const proceso = [
               </div>
             </div>
           </section>
-<section className="mx-auto max-w-7xl px-6 pb-8">
-  <div className="grid gap-4 md:grid-cols-3">
-    <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-        Atención directa
-      </p>
-      <p className="mt-3 text-base leading-7 text-stone-700">
-        Trato directo contigo, sin intermediarios ni vueltas innecesarias.
-      </p>
-    </div>
 
-    <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-        Acabado profesional
-      </p>
-      <p className="mt-3 text-base leading-7 text-stone-700">
-        Trabajo limpio, alineado y con buena presentación visual en cada ambiente.
-      </p>
-    </div>
+          <section className="mx-auto max-w-7xl px-6 pb-8">
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+                  Atención directa
+                </p>
+                <p className="mt-3 text-base leading-7 text-stone-700">
+                  Trato directo contigo, sin intermediarios ni vueltas
+                  innecesarias.
+                </p>
+              </div>
 
-    <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-        Respuesta rápida
-      </p>
-      <p className="mt-3 text-base leading-7 text-stone-700">
-        Cotización y coordinación directa por WhatsApp para avanzar más rápido.
-      </p>
-    </div>
-  </div>
-</section>
+              <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+                  Acabado profesional
+                </p>
+                <p className="mt-3 text-base leading-7 text-stone-700">
+                  Trabajo limpio, alineado y con buena presentación visual en
+                  cada ambiente.
+                </p>
+              </div>
+
+              <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+                  Respuesta rápida
+                </p>
+                <p className="mt-3 text-base leading-7 text-stone-700">
+                  Cotización y coordinación directa por WhatsApp para avanzar más
+                  rápido.
+                </p>
+              </div>
+            </div>
+          </section>
+
           <section className="mx-auto max-w-7xl px-6 pb-8">
             <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
               <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
                 <div>
-                  
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-                    <section className="mx-auto max-w-7xl px-6 pb-8">
-                      Sobre EDICOR
-                    </section>
+                    Sobre EDICOR
                   </p>
                   <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
-                    Trabajo responsable, buena presentación y acabados de
-                    calidad
+                    Trabajo responsable, buena presentación y acabados de calidad
                   </h2>
                 </div>
 
@@ -389,17 +395,15 @@ const proceso = [
                     resultado final limpio y profesional.
                   </p>
                   <p>
-                   “Haz realidad tu proyecto hoy mismo. Escríbenos y cotiza sin compromiso.”
-“Tu espacio merece un acabado perfecto. Contáctanos y empecemos.”
-“Estamos listos para transformar tu idea en un resultado impecable.”
-“Un buen trabajo comienza con un mensaje. ¡Hablemos!”.
+                    Haz realidad tu proyecto hoy mismo. Tu espacio merece un
+                    acabado perfecto, con una ejecución seria, ordenada y de
+                    buena presentación.
                   </p>
                   <div className="flex items-start gap-3 rounded-2xl bg-amber-50 p-4 text-amber-900">
                     <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0" />
                     <p className="text-sm font-medium">
-                      “Calidad, detalle y compromiso en cada trabajo. Contáctanos y compruébalo.”
-“Más que un servicio, ofrecemos resultados que se notan. Escríbenos.”
-“Trabajos bien hechos que hablan por sí solos. El siguiente puede ser el tuyo.”
+                      Calidad, detalle y compromiso en cada trabajo. Más que un
+                      servicio, buscamos entregar resultados que se noten.
                     </p>
                   </div>
                 </div>
@@ -416,45 +420,51 @@ const proceso = [
                 Especialistas en acabados de alta calidad para tu hogar o negocio
               </h2>
               <p className="mt-4 text-lg text-stone-700">
-                Transformamos tus espacios con acabados de calidad.
-                Desde la preparación hasta el acabado final, nos enfocamos en calidad, orden y responsabilidad.
+                Transformamos tus espacios con acabados de calidad. Desde la
+                preparación hasta el acabado final, nos enfocamos en orden,
+                precisión y responsabilidad.
               </p>
             </div>
 
-           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-  {servicios.map((servicio) => (
-    <button
-      key={servicio.titulo}
-      type="button"
-      onClick={() =>
-        setImagenActiva({
-          imagen: servicio.imagen,
-          titulo: servicio.titulo,
-          detalle: servicio.detalle,
-        })
-      }
-      className="group rounded-[2rem] border border-stone-200 bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-    >
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-700 text-white shadow-sm transition group-hover:bg-stone-900">
-        {servicio.icono}
-      </div>
-      <h3 className="text-lg font-bold tracking-tight text-stone-900">
-        {servicio.nombre}
-      </h3>
-      <p className="mt-2 text-sm leading-6 text-stone-600">
-        {servicio.texto}
-      </p>
-      <p className="mt-4 text-sm font-semibold text-amber-700">
-        Ver referencia
-      </p>
-    </button>
-  ))}
-</div>
-            <p>
-               <h4 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
-                   Cotiza rápido por WhatsApp y recibe atención personalizada
-                  </h4>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {servicios.map((servicio) => (
+                <button
+                  key={servicio.titulo}
+                  type="button"
+                  onClick={() =>
+                    setImagenActiva({
+                      imagen: servicio.imagen,
+                      titulo: servicio.titulo,
+                      detalle: servicio.detalle,
+                    })
+                  }
+                  className="group rounded-[2rem] border border-stone-200 bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-700 text-white shadow-sm transition group-hover:bg-stone-900">
+                    {servicio.icono}
+                  </div>
+                  <h3 className="text-lg font-bold tracking-tight text-stone-900">
+                    {servicio.nombre}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-stone-600">
+                    {servicio.texto}
+                  </p>
+                  <p className="mt-4 text-sm font-semibold text-amber-700">
+                    Ver referencia
+                  </p>
+                </button>
+              ))}
+            </div>
+
+            <div className="mt-10 rounded-[2rem] border border-amber-200 bg-amber-50 p-6 text-center shadow-sm">
+              <h4 className="text-2xl font-black tracking-tight text-stone-900 md:text-3xl">
+                Cotiza rápido por WhatsApp y recibe atención personalizada
+              </h4>
+              <p className="mt-3 text-stone-700">
+                Cuéntame tu idea, tu espacio o tu remodelación y te respondo de
+                forma directa.
               </p>
+            </div>
           </section>
 
           <section className="bg-white py-20" id="trabajos">
@@ -465,10 +475,10 @@ const proceso = [
                     Portafolio
                   </p>
                   <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
-                    “Trabajos bien hechos desde el primer detalle”
+                    Trabajos bien hechos desde el primer detalle
                   </h2>
                   <p className="mt-4 text-lg text-stone-700">
-                   El nivel de acabado que tu espacio merece
+                    El nivel de acabado que tu espacio merece.
                   </p>
                 </div>
 
@@ -485,12 +495,13 @@ const proceso = [
                   <article
                     key={item.titulo}
                     onClick={() => setImagenActiva(item)}
-                    className="cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    className="group cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm 
+                    transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
                     <img
                       src={item.imagen}
                       alt={item.titulo}
-                      className="h-72 w-full object-cover"
+                      className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                     <div className="p-5">
                       <h3 className="text-lg font-bold tracking-tight text-stone-900">
@@ -534,10 +545,10 @@ const proceso = [
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-                  Por qué elegirte
+                  Por qué elegirnos
                 </p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
-                 Por qué elegirnos para tu proyecto
+                  Por qué elegirnos para tu proyecto
                 </h2>
                 <ul className="mt-6 space-y-4 text-stone-700">
                   <li>Atención directa contigo, sin intermediarios.</li>
@@ -674,22 +685,58 @@ const proceso = [
             </div>
           </section>
         </main>
-
-        <footer className="border-t border-stone-200 bg-white">
-  <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-stone-600 md:flex-row md:items-center md:justify-between">
-    <div>
-      <p className="font-semibold text-stone-900">
-        EDICOR Acabados en Cerámica & Porcelanato
-      </p>
-      <p className="mt-1">
-        Villa María del Triunfo, Lima · WhatsApp: +51 998535347
-      </p>
-    </div>
-    <p>Página orientada a mostrar trabajos reales y captar clientes por internet.</p>
-  </div>
-</footer>
+        <section className="mx-auto max-w-7xl px-6 pb-16">
+  <div className="rounded-[2rem] border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-stone-50 p-8 shadow-sm md:p-10">
+    <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div className="max-w-2xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+          ¿Listo para empezar?
+        </p>
+        <h3 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
+          Cotiza tu proyecto y recibe atención directa por WhatsApp
+        </h3>
+        <p className="mt-3 text-stone-700">
+          Si estás pensando en renovar o dar acabados a pisos, baños, cocinas o cualquier ambiente,
+          escríbeme y revisamos la mejor solución para tu espacio.
+        </p>
       </div>
 
+      <a
+        href="https://wa.me/51998535347"
+        className="inline-flex items-center justify-center gap-2 rounded-2xl bg-stone-900 px-6 py-4 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.03] hover:bg-stone-800"
+      >
+        Escribir ahora
+        <ArrowUpRight className="h-4 w-4" />
+      </a>
+    </div>
+  </div>
+</section>
+
+        <footer className="border-t border-stone-200 bg-white">
+          <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-stone-600 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="font-semibold text-stone-900">
+                EDICOR Acabados en Cerámica & Porcelanato
+              </p>
+              <p className="mt-1">
+                Villa María del Triunfo, Lima · WhatsApp: +51 998535347
+              </p>
+            </div>
+            <p>
+              Página orientada a mostrar trabajos reales y captar clientes por
+              internet.
+            </p>
+          </div>
+        </footer>
+      </div>
+<a
+  href="https://wa.me/51998535347"
+  className="fixed bottom-5 right-5 z-[90] inline-flex items-center gap-3 rounded-full bg-green-600 px-5 py-3 
+  text-sm font-semibold text-white shadow-2xl transition duration-300 hover:scale-105 hover:bg-green-700"
+>
+  <MessageCircle className="h-5 w-5" />
+  WhatsApp
+</a>
       {imagenActiva && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
