@@ -26,6 +26,8 @@ import trabajo6 from "./assets/galeria/trabajo6.jpg";
 import sala from "./assets/sala.jpg";
 import bano from "./assets/bano.jpg";
 import pisos from "./assets/pisos.jpg";
+import nivelacion from "./assets/nivelacion.jpg";
+import revestimiento from "./assets/revestimiento.png";
 
 export default function AcabadosProPage() {
   const [imagenActiva, setImagenActiva] = useState(null);
@@ -51,89 +53,118 @@ export default function AcabadosProPage() {
     },
   ];
 
-  const galeria = [
-    {
-      imagen: trabajo1,
-      titulo: "Instalación de piso",
-      detalle: "Trabajo real con acabado limpio y buena presentación.",
-    },
-    {
-      imagen: trabajo2,
-      titulo: "Remodelación interior",
-      detalle: "Detalle de instalación con alineación cuidada.",
-    },
-    {
-      imagen: trabajo3,
-      titulo: "Acabado en porcelanato",
-      detalle: "Superficie terminada con buena nivelación y estética.",
-    },
-    {
-      imagen: trabajo4,
-      titulo: "Trabajo en ambiente residencial",
-      detalle: "Aplicación precisa y resultado visual profesional.",
-    },
-    {
-      imagen: trabajo5,
-      titulo: "Enchape y detalle",
-      detalle: "Acabados bien ejecutados en área de trabajo real.",
-    },
-    {
-      imagen: trabajo6,
-      titulo: "Presentación final",
-      detalle: "Resultado final limpio, ordenado y bien instalado.",
-    },
-  ];
+ const galeria = [
+  {
+    imagen: trabajo1,
+    titulo: "Porcelanato en sala",
+    detalle: "Instalación limpia con buena alineación y acabado uniforme.",
+  },
+  {
+    imagen: trabajo2,
+    titulo: "Remodelación interior",
+    detalle: "Trabajo real con mejor distribución visual y presentación final.",
+  },
+  {
+    imagen: trabajo3,
+    titulo: "Acabado en piso",
+    detalle: "Superficie terminada con nivelación correcta y estética moderna.",
+  },
+  {
+    imagen: trabajo4,
+    titulo: "Ambiente residencial",
+    detalle: "Aplicación precisa y resultado profesional en espacio habitable.",
+  },
+  {
+    imagen: trabajo5,
+    titulo: "Enchape decorativo",
+    detalle: "Detalle visual cuidado con cortes y presentación prolija.",
+  },
+  {
+    imagen: trabajo6,
+    titulo: "Entrega final",
+    detalle: "Resultado terminado, limpio y listo para uso del cliente.",
+  },
+];
 
-  const servicios = [
-    {
-      icono: <LayoutGrid className="h-5 w-5" />,
-      texto: "Instalación de pisos de cerámica y porcelanato: Acabados nivelados, alineados y con excelente presentación final.",
-    },
-    {
-      icono: <House className="h-5 w-5" />,
-      texto: "Chapado de paredes en baños, cocinas y fachadas:Estética moderna con detalles bien definidos.",
-    },
-    {
-      icono: <Ruler className="h-5 w-5" />,
-      texto: "Nivelación y preparación de superficies:Base firme para un acabado perfecto.",
-    },
-    {
-      icono: <Wrench className="h-5 w-5" />,
-      texto: "Remodelación de ambientes residenciales y comerciales;Transformamos espacios con resultados profesionales.",
-    },
-    {
-      icono: <Hammer className="h-5 w-5" />,
-      texto: "Cambio de revestimientos antiguos:Renovación total con instalación limpia y ordenada.",
-    },
-    {
-      icono: <Sparkles className="h-5 w-5" />,
-      texto: "Asesoría para elección de formato, diseño y distribución:Te ayudamos a elegir lo mejor para tu espacio.",
-    },
-  ];
-  
+ const servicios = [
+  {
+    icono: <LayoutGrid className="h-5 w-5" />,
+    nombre: "Instalación de pisos",
+    texto: "Cerámica y porcelanato con acabado nivelado y presentación fina.",
+    imagen: sala,
+    titulo: "Instalación de pisos de cerámica y porcelanato",
+    detalle:
+      "Acabados nivelados, alineados y con excelente presentación final.",
+  },
+  {
+    icono: <House className="h-5 w-5" />,
+    nombre: "Chapado de paredes",
+    texto: "Baños, cocinas y fachadas con cortes precisos y estética moderna.",
+    imagen: bano,
+    titulo: "Chapado de paredes en baños y cocinas",
+    detalle:
+      "Estética moderna con cortes precisos y excelente acabado visual.",
+  },
+  {
+    icono: <Ruler className="h-5 w-5" />,
+    nombre: "Nivelación",
+    texto: "Base firme y bien preparada para lograr un acabado perfecto.",
+    imagen: nivelacion,
+    titulo: "Nivelación y preparación de superficies",
+    detalle:
+      "Base firme y nivelada para lograr un acabado profesional duradero.",
+  },
+  {
+    icono: <Wrench className="h-5 w-5" />,
+    nombre: "Remodelación",
+    texto: "Ambientes residenciales y comerciales con resultado profesional.",
+    imagen: trabajo2,
+    titulo: "Remodelación de ambientes",
+    detalle:
+      "Transformación completa de espacios con acabados modernos y limpios.",
+  },
+  {
+    icono: <Hammer className="h-5 w-5" />,
+    nombre: "Cambio de revestimientos",
+    texto: "Renovación total con instalación limpia, ordenada y bien ejecutada.",
+    imagen: revestimiento,
+    titulo: "Cambio de revestimientos",
+    detalle:
+      "Renovación completa con instalación limpia y excelente presentación.",
+  },
+  {
+    icono: <Sparkles className="h-5 w-5" />,
+    nombre: "Asesoría en diseño",
+    texto: "Te ayudamos a elegir formato, distribución y estilo para tu espacio.",
+    imagen: trabajo6,
+    titulo: "Asesoría en diseño y distribución",
+    detalle:
+      "Te ayudamos a elegir lo mejor según tu espacio y estilo.",
+  },
+];
 
-  const proceso = [
-    {
-      paso: "1. Evaluación",
-      texto:
-        "Revisamos el área, medidas, tipo de material y estado de la superficie.",
-    },
-    {
-      paso: "2. Propuesta",
-      texto:
-        "Te indico la mejor forma de instalación, tiempos de trabajo y acabados recomendados.",
-    },
-    {
-      paso: "3. Ejecución",
-      texto:
-        "Realizo el trabajo con precisión, buena presentación y cuidado en cada detalle.",
-    },
-    {
-      paso: "4. Entrega",
-      texto:
-        "Te entrego el ambiente listo, bien acabado y con revisión final contigo.",
-    },
-  ];
+const proceso = [
+  {
+    paso: "1. Evaluación",
+    texto:
+      "Revisamos el área, medidas, tipo de material y estado de la superficie.",
+  },
+  {
+    paso: "2. Propuesta",
+    texto:
+      "Te indico la mejor forma de instalación, tiempos de trabajo y acabados recomendados.",
+  },
+  {
+    paso: "3. Ejecución",
+    texto:
+      "Realizo el trabajo con precisión, buena presentación y cuidado en cada detalle.",
+  },
+  {
+    paso: "4. Entrega",
+    texto:
+      "Te entrego el ambiente listo, bien acabado y con revisión final contigo.",
+  },
+];
 
   const testimonios = [
     {
@@ -199,9 +230,8 @@ export default function AcabadosProPage() {
                 </h1>
 
                 <p className="mt-6 max-w-xl text-lg leading-8 text-stone-700">
-                  Especialista en instalación de cerámica, porcelanato, chapados
-                  y remodelaciones. Trabajo con precisión, buena presentación y
-                  compromiso en cada proyecto.
+                  Especialista en cerámica, porcelanato, enchapes y remodelaciones. Realizo trabajos con buena nivelación, 
+                  cortes precisos, acabado limpio y presentación profesional.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -306,13 +336,45 @@ export default function AcabadosProPage() {
               </div>
             </div>
           </section>
+<section className="mx-auto max-w-7xl px-6 pb-8">
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+        Atención directa
+      </p>
+      <p className="mt-3 text-base leading-7 text-stone-700">
+        Trato directo contigo, sin intermediarios ni vueltas innecesarias.
+      </p>
+    </div>
 
+    <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+        Acabado profesional
+      </p>
+      <p className="mt-3 text-base leading-7 text-stone-700">
+        Trabajo limpio, alineado y con buena presentación visual en cada ambiente.
+      </p>
+    </div>
+
+    <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+        Respuesta rápida
+      </p>
+      <p className="mt-3 text-base leading-7 text-stone-700">
+        Cotización y coordinación directa por WhatsApp para avanzar más rápido.
+      </p>
+    </div>
+  </div>
+</section>
           <section className="mx-auto max-w-7xl px-6 pb-8">
             <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
               <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
                 <div>
+                  
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-                    Sobre EDICOR
+                    <section className="mx-auto max-w-7xl px-6 pb-8">
+                      Sobre EDICOR
+                    </section>
                   </p>
                   <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900">
                     Trabajo responsable, buena presentación y acabados de
@@ -359,21 +421,35 @@ export default function AcabadosProPage() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {servicios.map((servicio) => (
-                <div
-                  key={servicio.texto}
-                  className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-700 text-white shadow-sm">
-                    {servicio.icono}
-                  </div>
-                  <p className="text-base font-semibold leading-7 text-stone-800">
-                    {servicio.texto}
-                  </p>
-                </div>
-              ))}
-            </div>
+           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+  {servicios.map((servicio) => (
+    <button
+      key={servicio.titulo}
+      type="button"
+      onClick={() =>
+        setImagenActiva({
+          imagen: servicio.imagen,
+          titulo: servicio.titulo,
+          detalle: servicio.detalle,
+        })
+      }
+      className="group rounded-[2rem] border border-stone-200 bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-700 text-white shadow-sm transition group-hover:bg-stone-900">
+        {servicio.icono}
+      </div>
+      <h3 className="text-lg font-bold tracking-tight text-stone-900">
+        {servicio.nombre}
+      </h3>
+      <p className="mt-2 text-sm leading-6 text-stone-600">
+        {servicio.texto}
+      </p>
+      <p className="mt-4 text-sm font-semibold text-amber-700">
+        Ver referencia
+      </p>
+    </button>
+  ))}
+</div>
             <p>
                <h4 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
                    Cotiza rápido por WhatsApp y recibe atención personalizada
@@ -600,11 +676,18 @@ export default function AcabadosProPage() {
         </main>
 
         <footer className="border-t border-stone-200 bg-white">
-          <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-stone-600 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 Acabados en Cerámica & Porcelanato</p>
-            <p>Página enfocada en captar clientes por internet y redes sociales</p>
-          </div>
-        </footer>
+  <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-stone-600 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p className="font-semibold text-stone-900">
+        EDICOR Acabados en Cerámica & Porcelanato
+      </p>
+      <p className="mt-1">
+        Villa María del Triunfo, Lima · WhatsApp: +51 998535347
+      </p>
+    </div>
+    <p>Página orientada a mostrar trabajos reales y captar clientes por internet.</p>
+  </div>
+</footer>
       </div>
 
       {imagenActiva && (
