@@ -59,7 +59,7 @@ export default function AcabadosProPage() {
       imagen: sala,
     },
     {
-      titulo: "Chapado de baños y cocinas",
+      titulo: "Enchapado de baños y cocinas",
       detalle:
         "Revestimiento de muros con atención al detalle, cortes precisos y excelente presentación.",
       imagen: bano,
@@ -117,7 +117,7 @@ export default function AcabadosProPage() {
     },
     {
       icono: <House className="h-5 w-5" />,
-      nombre: "Chapado de paredes",
+      nombre: "enchapado de paredes",
       texto: "Baños, cocinas y fachadas con cortes precisos y estética moderna.",
       imagen: bano,
       titulo: "enhapado de paredes en baños y cocinas",
