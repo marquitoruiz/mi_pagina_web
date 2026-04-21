@@ -37,6 +37,7 @@ export default function AcabadosProPage() {
   const [imagenActiva, setImagenActiva] = useState(null);
   const [menuAbierto, setMenuAbierto] = useState(false);
   const [mostrarSubir, setMostrarSubir] = useState(false);
+  const [testimoniosSheet, setTestimoniosSheet] = useState([]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -45,6 +46,42 @@ export default function AcabadosProPage() {
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    fetch(
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSoC21Mx-nRZ7DBE7hZtR4gz0SmSnmx49fPSrFCs6C6_JCxi8cD1SPjc-iZigUbj2fcxLjoNOfbXBnn/pub?output=csv"
+    )
+      .then((res) => res.text())
+      .then((data) => {
+        const filas = data.trim().split("\n").slice(1);
+
+        const resultado = filas
+          .map((fila) => {
+            const columnas = fila.split(",");
+
+            return {
+              nombre: columnas[0]?.replace(/^"|"$/g, "").trim() || "",
+              texto: columnas[1]?.replace(/^"|"$/g, "").trim() || "",
+              estrellas: Number(
+                columnas[2]?.replace(/^"|"$/g, "").trim() || 5
+              ),
+              mostrar:
+                columnas[3]?.replace(/^"|"$/g, "").trim().toUpperCase() || "NO",
+            };
+          })
+          .filter(
+            (item) => item.nombre && item.texto && item.mostrar === "SI"
+          );
+
+        setTestimoniosSheet(resultado);
+      })
+      .catch((error) => {
+        console.error(
+          "Error cargando testimonios desde Google Sheets:",
+          error
+        );
+      });
   }, []);
 
   const abrirImagen = (imagen, titulo, detalle) => {
@@ -117,15 +154,15 @@ export default function AcabadosProPage() {
     },
     {
       icono: <House className="h-5 w-5" />,
-      nombre: "enchapado de paredes",
+      nombre: "Enchapado de paredes",
       texto: "Baños, cocinas y fachadas con cortes precisos y estética moderna.",
       imagen: bano,
-      titulo: "enhapado de paredes en baños y cocinas",
+      titulo: "Enchapado de paredes en baños y cocinas",
       detalle:
         "Estética moderna con cortes precisos y excelente acabado visual.",
     },
     {
-      icono: <Ruler className="h-5 w-5" />, 
+      icono: <Ruler className="h-5 w-5" />,
       nombre: "Nivelación",
       texto: "Base firme y bien preparada para lograr un acabado perfecto.",
       imagen: nivelacion,
@@ -183,24 +220,6 @@ export default function AcabadosProPage() {
       paso: "4. Entrega",
       texto:
         "Te entrego el ambiente listo, bien acabado y con revisión final contigo.",
-    },
-  ];
-
-  const testimonios = [
-    {
-      nombre: "Cliente residencial",
-      texto:
-        "Quedó muy bien el porcelanato de la sala. Buen acabado, puntualidad y orden en el trabajo.",
-    },
-    {
-      nombre: "Remodelación de baño",
-      texto:
-        "Se nota la experiencia en los cortes y el alineado. Muy recomendado para acabados finos.",
-    },
-    {
-      nombre: "Proyecto de cocina",
-      texto:
-        "Trabajo serio y responsable. El enchape quedó limpio y elegante.",
     },
   ];
 
@@ -572,7 +591,9 @@ export default function AcabadosProPage() {
                 {galeria.map((item) => (
                   <article
                     key={item.titulo}
-                    onClick={() => abrirImagen(item.imagen, item.titulo, item.detalle)}
+                    onClick={() =>
+                      abrirImagen(item.imagen, item.titulo, item.detalle)
+                    }
                     className="group cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
                     <img
@@ -597,7 +618,11 @@ export default function AcabadosProPage() {
                   <article
                     key={trabajo.titulo}
                     onClick={() =>
-                      abrirImagen(trabajo.imagen, trabajo.titulo, trabajo.detalle)
+                      abrirImagen(
+                        trabajo.imagen,
+                        trabajo.titulo,
+                        trabajo.detalle
+                      )
                     }
                     className="group cursor-pointer overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-50 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
@@ -669,66 +694,93 @@ export default function AcabadosProPage() {
               <div className="max-w-3xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
                   Testimonios
-                  <section className="mx-auto max-w-7xl px-6 py-20">
-  <div className="max-w-3xl">
-    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-      Testimonios en video
-    </p>
-    <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
-      Clientes satisfechos con el resultado
-    </h2>
-    <p className="mt-4 text-lg text-stone-700">
-      Opinión real de cliente luego de finalizar el trabajo.
-    </p>
-  </div>
-
-  <div className="mt-10 grid gap-6 md:grid-cols-2">
-    
-    <div className="rounded-[2rem] border border-stone-200 bg-white p-4 shadow-sm">
-      <div className="aspect-video overflow-hidden rounded-[1.5rem]">
-        <iframe
-          className="h-full w-full"
-          src="https://www.youtube.com/embed/ZYs9No62AaM"
-          title="Testimonio cliente EDICOR"
-          allowFullScreen
-        />
-      </div>
-      <p className="mt-4 text-sm font-semibold text-stone-900">
-        Cliente satisfecho con instalación de porcelanato
-      </p>
-    </div>
-
-  </div>
-</section>
                 </p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
-                  comentarios de clientes satisfechos 
+                  Comentarios de clientes satisfechos
                 </h2>
               </div>
 
               <div className="mt-10 grid gap-6 md:grid-cols-3">
-                {testimonios.map((testimonio) => (
-                  <div
-                    key={testimonio.nombre}
-                    className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm"
-                  >
-                    <div className="mb-4 flex gap-1 text-amber-500">
-                      <Star className="h-4 w-4 fill-current" />
-                      <Star className="h-4 w-4 fill-current" />
-                      <Star className="h-4 w-4 fill-current" />
-                      <Star className="h-4 w-4 fill-current" />
-                      <Star className="h-4 w-4 fill-current" />
+                {testimoniosSheet.length > 0 ? (
+                  testimoniosSheet.map((testimonio, index) => (
+                    <div
+                      key={`${testimonio.nombre}-${index}`}
+                      className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm"
+                    >
+                      <div className="mb-4 flex gap-1 text-amber-500">
+                        {Array.from(
+                          { length: Math.max(1, Math.min(5, testimonio.estrellas || 5)) },
+                          (_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-current" />
+                          )
+                        )}
+                      </div>
+
+                      <p className="text-lg leading-8 text-stone-700">
+                        “{testimonio.texto}”
+                      </p>
+
+                      <p className="mt-6 text-sm font-semibold text-amber-800">
+                        {testimonio.nombre}
+                      </p>
                     </div>
-                    <p className="text-lg leading-8 text-stone-700">
-                      “{testimonio.texto}”
-                    </p>
-                    <p className="mt-6 text-sm font-semibold text-amber-800">
-                      {testimonio.nombre}
+                  ))
+                ) : (
+                  <div className="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm md:col-span-3">
+                    <p className="text-stone-600">
+                      Aún no hay testimonios publicados.
                     </p>
                   </div>
-                ))}
+                )}
               </div>
             </div>
+          </section>
+
+          <section className="mx-auto max-w-7xl px-6 py-20">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+                Testimonios en video
+              </p>
+              <h2 className="mt-3 text-3xl font-black tracking-tight text-stone-900 md:text-4xl">
+                Clientes satisfechos con el resultado
+              </h2>
+              <p className="mt-4 text-lg text-stone-700">
+                Opinión real de cliente luego de finalizar el trabajo.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              <div className="rounded-[2rem] border border-stone-200 bg-white p-4 shadow-sm">
+                <div className="aspect-video overflow-hidden rounded-[1.5rem]">
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/ZYs9No62AaM"
+                    title="Testimonio cliente EDICOR"
+                    allowFullScreen
+                  />
+                </div>
+                <p className="mt-4 text-sm font-semibold text-stone-900">
+                  Cliente satisfecho con instalación de porcelanato
+                </p>
+              </div>
+            </div>
+            <div className="mt-10 rounded-[2rem] border border-amber-200 bg-amber-50 p-6 text-center shadow-sm">
+  <h3 className="text-2xl font-black tracking-tight text-stone-900">
+    ¿Ya trabajaste con nosotros?
+  </h3>
+  <p className="mt-3 text-stone-700">
+    Déjanos tu comentario por WhatsApp y cuéntanos cómo fue tu experiencia con el trabajo realizado.
+  </p>
+  <a
+    href="https://wa.me/51998535347?text=Hola%2C%20quiero%20dejar%20mi%20comentario%20sobre%20el%20trabajo%20realizado%20con%20EDICOR%20Acabados.%20Mi%20nombre%20es%3A%20"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-amber-700 px-6 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:scale-[1.02] hover:bg-amber-800"
+  >
+    <MessageCircle className="h-4 w-4" />
+    Dejar mi comentario
+  </a>
+</div>
           </section>
 
           <section className="mx-auto max-w-7xl px-6 py-20" id="contacto">
