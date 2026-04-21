@@ -1,0 +1,33 @@
+mi_pagina_web/
+├── node_modules/
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   │   ├── logo-edicor.jpeg
+│   │   ├── principal.jpg
+│   │   ├── antes-despues.jpg.png
+│   │   ├── detalle-juntas.jpg.jpeg
+│   │   ├── sala.jpg
+│   │   ├── bano.jpg
+│   │   ├── pisos.jpg
+│   │   ├── nivelacion.jpg
+│   │   ├── revestimiento.png
+│   │   └── galeria/
+│   │       ├── trabajo1.jpg
+│   │       ├── trabajo2.jpg
+│   │       ├── trabajo3.jpg
+│   │       ├── trabajo4.jpg
+│   │       ├── trabajo5.jpg
+│   │       └── trabajo6.jpg
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js

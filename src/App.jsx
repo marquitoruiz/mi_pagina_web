@@ -120,12 +120,12 @@ export default function AcabadosProPage() {
       nombre: "Chapado de paredes",
       texto: "Baños, cocinas y fachadas con cortes precisos y estética moderna.",
       imagen: bano,
-      titulo: "Chapado de paredes en baños y cocinas",
+      titulo: "enhapado de paredes en baños y cocinas",
       detalle:
         "Estética moderna con cortes precisos y excelente acabado visual.",
     },
     {
-      icono: <Ruler className="h-5 w-5" />,
+      icono: <Ruler className="h-5 w-5" />, 
       nombre: "Nivelación",
       texto: "Base firme y bien preparada para lograr un acabado perfecto.",
       imagen: nivelacion,
